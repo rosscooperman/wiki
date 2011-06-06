@@ -1,0 +1,41 @@
+$page_bg: #3f4247;
+$content_bg: #fff;
+
+html, body {
+  height: 100%;
+  background: $page_bg;
+  font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+  font-size: 100%;
+}
+
+#page {
+  width: 960px;
+  margin: 0 auto;
+
+  #logo > a {
+    color: $content_bg;
+    font-size: 3em;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+#content {
+  background: $content_bg;
+  padding: 1em;
+
+  #page-header {
+    position: relative;
+    margin: -0.5em;
+    margin-bottom: 0.5em;
+    padding: 0.3125em;
+    background: $content_bg - #222;
+    font-size: 2em;
+
+    .tools {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}
