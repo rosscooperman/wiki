@@ -56,6 +56,9 @@ html, body {
           margin: 0 0.5em 0 0;
           @include rounded-corners(8px);
           background: ($content_bg - #555) 7px center no-repeat;
+          &:hover {
+            background-color: ($content_bg - #666);
+          }
 
           &.edit { background-image: url(pencil.png); }
           &.delete { background-image: url(prohibited.png); }
