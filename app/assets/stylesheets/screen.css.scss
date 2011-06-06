@@ -1,6 +1,12 @@
 $page_bg: #3f4247;
 $content_bg: #fff;
 
+@mixin rounded-corners($radius) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
 html, body {
   height: 100%;
   background: $page_bg;
@@ -35,7 +41,26 @@ html, body {
     .tools {
       position: absolute;
       right: 0;
-      top: 0;
+      top: 0.333em;
+      overflow: visible;
+
+      li {
+        float: left;
+
+        a {
+          display: block;
+          color: $content_bg;
+          font-size: 0.5em;
+          text-decoration: none;
+          padding: 0.555em 0.555em 0.555em 2.5em;
+          margin: 0 0.5em 0 0;
+          @include rounded-corners(8px);
+          background: ($content_bg - #555) 7px center no-repeat;
+
+          &.edit { background-image: url(pencil.png); }
+          &.delete { background-image: url(prohibited.png); }
+        }
+      }
     }
   }
 }

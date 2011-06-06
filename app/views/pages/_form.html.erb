@@ -2,4 +2,5 @@
   <%= f.input :title %>
   <%= f.input :content %>
   <%= f.button :submit %>
+  <%= link_to :cancel, page_path(@page), :confirm => 'Are you sure?' %>
 <% end %>

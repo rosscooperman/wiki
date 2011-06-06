@@ -1,9 +1,9 @@
 <div id="page-header">
   <h1><%= @page.title %></h1>
-  <div class="tools">
-    <%= link_to 'Edit Page', edit_page_path(@page), :class => 'edit' %>
-    <%= delete_link 'Delete Page', page_path(@page) %>
-  </div>
+  <ul class="tools">
+    <li><%= link_to 'Edit', edit_page_path(@page), :class => 'edit' %></li>
+    <li><%= delete_link 'Delete', page_path(@page) %></li>
+  </ul>
 </div>
 
 <div id="page-content"><%= @page.content %></div>
